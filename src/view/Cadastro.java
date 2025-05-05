@@ -176,33 +176,26 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
         // TODO add your handling code here:
-        try {
-            
-            if(!nomeCadastroTxt.getText().isEmpty()){
-                if(!usuarioCadastroTxt.getText().isEmpty()){
-                    if(!senhaCadastroTxt.getText().isEmpty()){
-                        
-                        UsuarioDAO dao = new UsuarioDAO();
-                        
-                        usuario = new Usuario(nomeCadastroTxt.getText(), usuarioCadastroTxt.getText(), senhaCadastroTxt.getText());
-                        dao.cadastrarUsuario(usuario);
-                        
-                    }else{
-                        JOptionPane.showMessageDialog(null, "O campo Senha não pode estar vazio");
-                    }
-                    
-                    
-                } else{
-                    JOptionPane.showMessageDialog(null, "O campo Usuário não pode estar vazio");
-                    
-                }
-                
-            }else{
-                JOptionPane.showMessageDialog(null, "O campo Nome não pode estar vazio");
-            }
-            
-        } catch (Exception e) {
-        }
+        
+        String nome = nomeCadastroTxt.getText();
+        String usuario = usuarioCadastroTxt.getText();
+        String senha = senhaCadastroTxt.getText();
+
+        // Criando objeto Usuario e preenchendo
+        Usuario usu = new Usuario();
+        usu.setNome(nome);
+        usu.setUsuario(usuario);
+        usu.setSenha(senha);
+
+        // Cadastrando no banco com o DAO
+        UsuarioDAO dao = new UsuarioDAO();
+        dao.cadastrarUsuario(usu);
+
+        // Limpando os campos após o cadastro
+        nomeCadastroTxt.setText("");
+        usuarioCadastroTxt.setText("");
+        senhaCadastroTxt.setText("");
+       
         
                                                       
     }//GEN-LAST:event_cadastroButtonActionPerformed

@@ -26,21 +26,111 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        loginPanel = new javax.swing.JPanel();
+        Login = new javax.swing.JLabel();
+        usuarioLogin = new javax.swing.JLabel();
+        senhaLogin = new javax.swing.JLabel();
+        usuarioLoginTxt = new javax.swing.JTextField();
+        senhaLoginTxt = new javax.swing.JTextField();
+        loginButton = new javax.swing.JToggleButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        loginPanel.setBackground(new java.awt.Color(0, 0, 0));
+
+        Login.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Login.setForeground(new java.awt.Color(0, 204, 0));
+        Login.setText("LOGIN");
+
+        usuarioLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        usuarioLogin.setForeground(new java.awt.Color(0, 204, 0));
+        usuarioLogin.setText("Usuário:");
+
+        senhaLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        senhaLogin.setForeground(new java.awt.Color(0, 204, 0));
+        senhaLogin.setText("Senha:");
+
+        usuarioLoginTxt.setBackground(new java.awt.Color(102, 102, 102));
+        usuarioLoginTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuarioLoginTxtActionPerformed(evt);
+            }
+        });
+
+        senhaLoginTxt.setBackground(new java.awt.Color(102, 102, 102));
+
+        loginButton.setForeground(new java.awt.Color(0, 204, 0));
+        loginButton.setText("Logar");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
+        loginPanel.setLayout(loginPanelLayout);
+        loginPanelLayout.setHorizontalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(senhaLogin)
+                            .addComponent(usuarioLogin))
+                        .addGap(18, 18, 18)
+                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(usuarioLoginTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(senhaLoginTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(Login))
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+        loginPanelLayout.setVerticalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(Login)
+                .addGap(37, 37, 37)
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(usuarioLogin)
+                    .addComponent(usuarioLoginTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(senhaLogin)
+                    .addComponent(senhaLoginTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58)
+                .addComponent(loginButton)
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void usuarioLoginTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioLoginTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usuarioLoginTxtActionPerformed
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +168,12 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Login;
+    private javax.swing.JToggleButton loginButton;
+    private javax.swing.JPanel loginPanel;
+    private javax.swing.JLabel senhaLogin;
+    private javax.swing.JTextField senhaLoginTxt;
+    private javax.swing.JLabel usuarioLogin;
+    private javax.swing.JTextField usuarioLoginTxt;
     // End of variables declaration//GEN-END:variables
 }
