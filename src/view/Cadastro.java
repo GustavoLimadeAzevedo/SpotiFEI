@@ -177,25 +177,44 @@ public class Cadastro extends javax.swing.JFrame {
     private void cadastroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonActionPerformed
         // TODO add your handling code here:
         
-        String nome = nomeCadastroTxt.getText();
-        String usuario = usuarioCadastroTxt.getText();
-        String senha = senhaCadastroTxt.getText();
+        String nome = nomeCadastroTxt.getText().trim();
+        String usuario = usuarioCadastroTxt.getText().trim();
+        String senha = senhaCadastroTxt.getText().trim();
 
-        // Criando objeto Usuario e preenchendo
+        // Validação dos campos
+        if (nome.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "O campo Nome não pode estar vazio!", "Erro", JOptionPane.ERROR_MESSAGE);
+                nomeCadastroTxt.requestFocus(); // Coloca o foco no campo Nome
+                    return; // Interrompe a execução do método
+        }
+
+        if (usuario.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "O campo Usuário não pode estar vazio!", "Erro", JOptionPane.ERROR_MESSAGE);
+                usuarioCadastroTxt.requestFocus();
+                    return;
+        }
+
+        if (senha.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "O campo Senha não pode estar vazio!", "Erro", JOptionPane.ERROR_MESSAGE);
+                senhaCadastroTxt.requestFocus();
+                return;
+        }
+
+        // Só prossegue se todos os campos estiverem preenchidos
         Usuario usu = new Usuario();
         usu.setNome(nome);
         usu.setUsuario(usuario);
         usu.setSenha(senha);
 
-        // Cadastrando no banco com o DAO
         UsuarioDAO dao = new UsuarioDAO();
         dao.cadastrarUsuario(usu);
 
-        // Limpando os campos após o cadastro
+        // Limpa os campos após o cadastro
         nomeCadastroTxt.setText("");
         usuarioCadastroTxt.setText("");
         senhaCadastroTxt.setText("");
-       
+
+        JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
         
                                                       
     }//GEN-LAST:event_cadastroButtonActionPerformed
