@@ -16,9 +16,9 @@ public class Conexao {
         try {
             Class.forName("org.postgresql.Driver");
             return java.sql.DriverManager.getConnection(
-                "jdbc:postgresql://localhost:5432/SpotiFEI", // banco
-                "postgres", // usuário
-                "mingau10"  // senha
+                "jdbc:postgresql://localhost:5432/SpotiFEI", 
+                "postgres", 
+                "mingau10"  
             );
         } catch (Exception e) {
             throw new RuntimeException("Erro ao conectar: " + e.getMessage());
