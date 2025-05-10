@@ -4,6 +4,10 @@
  */
 package view;
 
+import dao.UsuarioDAO;
+import javax.swing.JOptionPane;
+import model.Usuario;
+
 /**
  *
  * @author gusta
@@ -13,6 +17,9 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    
+    private Usuario usuario;
+    
     public Login() {
         initComponents();
     }
@@ -60,6 +67,11 @@ public class Login extends javax.swing.JFrame {
         });
 
         senhaLoginTxt.setBackground(new java.awt.Color(102, 102, 102));
+        senhaLoginTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senhaLoginTxtActionPerformed(evt);
+            }
+        });
 
         loginButton.setForeground(new java.awt.Color(0, 204, 0));
         loginButton.setText("Logar");
@@ -106,7 +118,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(voltar_login, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel1)))
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +135,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(senhaLoginTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58)
                 .addComponent(loginButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(voltar_login))
@@ -134,15 +146,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -156,6 +164,49 @@ public class Login extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+        String usuarioDigita = usuarioLoginTxt.getText().trim();
+        String senhaDigita = new String(senhaLoginTxt.getText());
+        
+        if (usuarioDigita.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "O campo Usuário não pode estar vazio!", "Erro", JOptionPane.ERROR_MESSAGE);
+                usuarioLoginTxt.requestFocus();
+                    return;
+        }
+
+        if (senhaDigita.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "O campo Senha não pode estar vazio!", "Erro", JOptionPane.ERROR_MESSAGE);
+                senhaLoginTxt.requestFocus();
+                return;
+        }
+        
+        // Usa a UsuarioDAO para verificar
+    UsuarioDAO usuarioDAO = new UsuarioDAO();
+    Usuario usuarioLogado = usuarioDAO.logarUsuario(usuarioDigita, senhaDigita);
+    
+    // Verifica se o login foi bem-sucedido
+    if (usuarioLogado != null) {
+        JOptionPane.showMessageDialog(this,
+            "Login realizado com sucesso! Bem-vindo(a), " + usuarioLogado.getNome(),
+            "Sucesso",
+            JOptionPane.INFORMATION_MESSAGE);
+
+        new Menu().setVisible(true);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this,
+            "Usuário ou senha incorretos!",
+            "Erro",
+            JOptionPane.ERROR_MESSAGE);
+
+        usuarioLoginTxt.setText("");
+        senhaLoginTxt.setText("");
+        usuarioLoginTxt.requestFocus();
+    }
+        
+        
+        
+        
+        
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void voltar_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar_loginActionPerformed
@@ -165,6 +216,10 @@ public class Login extends javax.swing.JFrame {
         telaCadastro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltar_loginActionPerformed
+
+    private void senhaLoginTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaLoginTxtActionPerformed
 
     /**
      * @param args the command line arguments

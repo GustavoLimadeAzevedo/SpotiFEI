@@ -28,8 +28,11 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         menuLabel = new javax.swing.JLabel();
+<<<<<<< HEAD
         bt_irPlaylist = new javax.swing.JButton();
         bt_irMusicas = new javax.swing.JButton();
+=======
+>>>>>>> 8ae652faa6ddff0324464b64a3ef87227aaaf5df
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,6 +41,7 @@ public class Menu extends javax.swing.JFrame {
         menuLabel.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         menuLabel.setForeground(new java.awt.Color(0, 204, 0));
         menuLabel.setText("SpotiFEI");
+<<<<<<< HEAD
 
         bt_irPlaylist.setText("Playlists");
         bt_irPlaylist.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +56,8 @@ public class Menu extends javax.swing.JFrame {
                 bt_irMusicasActionPerformed(evt);
             }
         });
+=======
+>>>>>>> 8ae652faa6ddff0324464b64a3ef87227aaaf5df
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,19 +70,31 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(bt_irMusicas)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap(152, Short.MAX_VALUE)
                 .addComponent(menuLabel)
                 .addGap(138, 138, 138))
+=======
+                .addContainerGap(146, Short.MAX_VALUE)
+                .addComponent(menuLabel)
+                .addGap(144, 144, 144))
+>>>>>>> 8ae652faa6ddff0324464b64a3ef87227aaaf5df
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(menuLabel)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_irPlaylist)
                     .addComponent(bt_irMusicas))
                 .addContainerGap(216, Short.MAX_VALUE))
+=======
+                .addGap(24, 24, 24)
+                .addComponent(menuLabel)
+                .addContainerGap(241, Short.MAX_VALUE))
+>>>>>>> 8ae652faa6ddff0324464b64a3ef87227aaaf5df
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -152,8 +170,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton bt_irMusicas;
     private javax.swing.JButton bt_irPlaylist;
+=======
+>>>>>>> 8ae652faa6ddff0324464b64a3ef87227aaaf5df
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel menuLabel;
     // End of variables declaration//GEN-END:variables
