@@ -42,6 +42,8 @@ public class Cadastro extends javax.swing.JFrame {
         usuarioCadastro = new javax.swing.JLabel();
         usuarioCadastroTxt = new javax.swing.JTextField();
         senhaCadastro = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 0));
@@ -94,6 +96,17 @@ public class Cadastro extends javax.swing.JFrame {
         senhaCadastro.setForeground(new java.awt.Color(0, 204, 0));
         senhaCadastro.setText("Senha:");
 
+        jLabel1.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel1.setText("Ir para LOGIN ->");
+
+        jButton1.setForeground(new java.awt.Color(0, 204, 0));
+        jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout cadastroPanelLayout = new javax.swing.GroupLayout(cadastroPanel);
         cadastroPanel.setLayout(cadastroPanelLayout);
         cadastroPanelLayout.setHorizontalGroup(
@@ -120,11 +133,19 @@ public class Cadastro extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, cadastroPanelLayout.createSequentialGroup()
                                 .addComponent(senhaCadastro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(senhaCadastroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(cadastroPanelLayout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(cadastroButton)))
+                                .addComponent(senhaCadastroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(73, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastroPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(cadastroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastroPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastroPanelLayout.createSequentialGroup()
+                        .addComponent(cadastroButton)
+                        .addGap(152, 152, 152))))
         );
         cadastroPanelLayout.setVerticalGroup(
             cadastroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,9 +164,13 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGroup(cadastroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(senhaCadastro)
                     .addComponent(senhaCadastroTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
+                .addGap(34, 34, 34)
                 .addComponent(cadastroButton)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(cadastroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -219,6 +244,14 @@ public class Cadastro extends javax.swing.JFrame {
                                                       
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Login telaLogin = new Login();
+        telaLogin.setLocationRelativeTo(null); 
+        telaLogin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,6 +291,8 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel Cadastro;
     private javax.swing.JButton cadastroButton;
     private javax.swing.JPanel cadastroPanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel nomeCadastro;
     private javax.swing.JTextField nomeCadastroTxt;
     private javax.swing.JLabel senhaCadastro;
