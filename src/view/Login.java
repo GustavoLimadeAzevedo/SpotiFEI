@@ -33,6 +33,8 @@ public class Login extends javax.swing.JFrame {
         usuarioLoginTxt = new javax.swing.JTextField();
         senhaLoginTxt = new javax.swing.JTextField();
         loginButton = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
+        voltar_login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +69,17 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel1.setText("<- Voltar para o cadastro");
+
+        voltar_login.setForeground(new java.awt.Color(0, 204, 0));
+        voltar_login.setText("Voltar");
+        voltar_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltar_loginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
         loginPanel.setLayout(loginPanelLayout);
         loginPanelLayout.setHorizontalGroup(
@@ -87,7 +100,12 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(Login))
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addGap(142, 142, 142)
-                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(voltar_login, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
         loginPanelLayout.setVerticalGroup(
@@ -105,7 +123,11 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(senhaLoginTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58)
                 .addComponent(loginButton)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(voltar_login))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -135,6 +157,14 @@ public class Login extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void voltar_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar_loginActionPerformed
+        // TODO add your handling code here:
+        Cadastro telaCadastro = new Cadastro();
+        telaCadastro.setLocationRelativeTo(null); // Centraliza na tela
+        telaCadastro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_voltar_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,11 +203,13 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Login;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JToggleButton loginButton;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JLabel senhaLogin;
     private javax.swing.JTextField senhaLoginTxt;
     private javax.swing.JLabel usuarioLogin;
     private javax.swing.JTextField usuarioLoginTxt;
+    private javax.swing.JButton voltar_login;
     // End of variables declaration//GEN-END:variables
 }
