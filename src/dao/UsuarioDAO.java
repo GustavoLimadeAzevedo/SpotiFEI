@@ -4,11 +4,12 @@
  */
 package dao;
 
-import Conexao.Conexao; // Usando a conexão mais recente
+import Conexao.Conexao; 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import model.Usuario;
+import java.sql.ResultSet;
 
 /**
  *
@@ -39,5 +40,62 @@ public class UsuarioDAO {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar: " + e.getMessage());
         }
+       } 
+    
+    public Usuario logarUsuario(String usuario, String senha) {
+    String sql = "SELECT id, nome, usuario FROM usuarios WHERE usuario = ? AND senha = ?";
+    
+    try (PreparedStatement ps = con.prepareStatement(sql)) {
+        ps.setString(1, usuario);
+        ps.setString(2, senha);
+        
+        // Modificação principal está aqui ↓
+        try (ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                Usuario usuarioLogado = new Usuario();
+                usuarioLogado.setId(rs.getInt("id"));
+                usuarioLogado.setNome(rs.getString("nome"));
+                usuarioLogado.setUsuario(rs.getString("usuario"));
+                return usuarioLogado;
+            }
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Erro ao fazer login: " + e.getMessage());
     }
+    return null;
 }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+      
+      
+        
