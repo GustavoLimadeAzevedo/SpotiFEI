@@ -6,6 +6,7 @@ package view;
 import dao.UsuarioDAO;
 import javax.swing.JOptionPane;
 import model.Usuario;
+import Controller.controllerUsuario;
 
 
 
@@ -211,8 +212,8 @@ public class Cadastro extends javax.swing.JFrame {
         // Validação dos campos
         if (nome.isEmpty()) {
             JOptionPane.showMessageDialog(null, "O campo Nome não pode estar vazio!", "Erro", JOptionPane.ERROR_MESSAGE);
-                nomeCadastroTxt.requestFocus(); // Coloca o foco no campo Nome
-                    return; // Interrompe a execução do método
+                nomeCadastroTxt.requestFocus(); 
+                    return; 
         }
 
         if (usuario.isEmpty()) {
@@ -227,22 +228,23 @@ public class Cadastro extends javax.swing.JFrame {
                 return;
         }
 
-        // Só prossegue se todos os campos estiverem preenchidos
+        
         Usuario usu = new Usuario();
         usu.setNome(nome);
         usu.setUsuario(usuario);
         usu.setSenha(senha);
 
-        UsuarioDAO dao = new UsuarioDAO();
-        dao.cadastrarUsuario(usu);
 
-        // Limpa os campos após o cadastro
+        controllerUsuario controllerUsuario = new controllerUsuario();
+        controllerUsuario.cadastrarUsuario(usu); // Método deve existir no ControllerUsuario
+
+// Limpa os campos após o cadastro
         nomeCadastroTxt.setText("");
         usuarioCadastroTxt.setText("");
         senhaCadastroTxt.setText("");
 
-        JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
-        
+// Exibe mensagem de sucesso
+JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
                                                       
     }//GEN-LAST:event_cadastroButtonActionPerformed
 
