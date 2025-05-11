@@ -73,6 +73,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        loginButton.setBackground(new java.awt.Color(0, 0, 0));
         loginButton.setForeground(new java.awt.Color(0, 204, 0));
         loginButton.setText("Logar");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +85,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 204, 0));
         jLabel1.setText("<- Voltar para o cadastro");
 
+        voltar_login.setBackground(new java.awt.Color(0, 0, 0));
         voltar_login.setForeground(new java.awt.Color(0, 204, 0));
         voltar_login.setText("Voltar");
         voltar_login.addActionListener(new java.awt.event.ActionListener() {
