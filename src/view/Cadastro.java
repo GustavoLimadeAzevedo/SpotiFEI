@@ -57,6 +57,7 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
+        cadastroButton.setBackground(new java.awt.Color(0, 0, 0));
         cadastroButton.setForeground(new java.awt.Color(0, 204, 0));
         cadastroButton.setText("Cadastrar");
         cadastroButton.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +100,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 204, 0));
         jLabel1.setText("Ir para LOGIN ->");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setForeground(new java.awt.Color(0, 204, 0));
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
