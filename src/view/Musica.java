@@ -36,9 +36,11 @@ public class Musica extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 204, 102));
+        jLabel1.setForeground(new java.awt.Color(0, 255, 51));
         jLabel1.setText("MÚSICAS");
 
+        bt_irMenu.setBackground(new java.awt.Color(0, 0, 0));
+        bt_irMenu.setForeground(new java.awt.Color(51, 255, 51));
         bt_irMenu.setText("Menu");
         bt_irMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
