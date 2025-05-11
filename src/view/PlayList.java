@@ -29,7 +29,7 @@ public class PlayList extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         bt_voltaMenu = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btMusica = new javax.swing.JButton();
         bt_irParaCriaPlaylist = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -44,6 +44,8 @@ public class PlayList extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 255, 51));
         jLabel1.setText("PLAYLISTS");
 
+        bt_voltaMenu.setBackground(new java.awt.Color(0, 0, 0));
+        bt_voltaMenu.setForeground(new java.awt.Color(51, 255, 102));
         bt_voltaMenu.setText("Menu");
         bt_voltaMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,8 +53,17 @@ public class PlayList extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Músicas");
+        btMusica.setBackground(new java.awt.Color(0, 0, 0));
+        btMusica.setForeground(new java.awt.Color(51, 255, 51));
+        btMusica.setText("Músicas");
+        btMusica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMusicaActionPerformed(evt);
+            }
+        });
 
+        bt_irParaCriaPlaylist.setBackground(new java.awt.Color(0, 0, 0));
+        bt_irParaCriaPlaylist.setForeground(new java.awt.Color(51, 255, 51));
         bt_irParaCriaPlaylist.setText("Criar uma playlist");
         bt_irParaCriaPlaylist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,6 +80,8 @@ public class PlayList extends javax.swing.JFrame {
         jTextArea1.setText("playlists que foram criadas...");
         jScrollPane1.setViewportView(jTextArea1);
 
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setForeground(new java.awt.Color(51, 255, 51));
         jButton4.setText("Excluir Playlist");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -85,7 +98,7 @@ public class PlayList extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(bt_voltaMenu)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)
+                        .addComponent(btMusica)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addComponent(bt_irParaCriaPlaylist)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -103,12 +116,12 @@ public class PlayList extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(22, 22, 22)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_voltaMenu)
-                    .addComponent(jButton2)
+                    .addComponent(btMusica)
                     .addComponent(bt_irParaCriaPlaylist)
                     .addComponent(jButton4))
                 .addGap(15, 15, 15))
@@ -146,6 +159,13 @@ public class PlayList extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_bt_voltaMenuActionPerformed
 
+    private void btMusicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMusicaActionPerformed
+        Musica telaMusica = new Musica();
+        telaMusica.setLocationRelativeTo(null);
+        telaMusica.setVisible(true);
+        this.dispose(); // TODO add your handling code here:
+    }//GEN-LAST:event_btMusicaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -182,9 +202,9 @@ public class PlayList extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btMusica;
     private javax.swing.JButton bt_irParaCriaPlaylist;
     private javax.swing.JButton bt_voltaMenu;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
