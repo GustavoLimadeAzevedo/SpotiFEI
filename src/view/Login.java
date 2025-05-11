@@ -4,6 +4,7 @@
  */
 package view;
 
+import Controller.controllerUsuario;
 import dao.UsuarioDAO;
 import javax.swing.JOptionPane;
 import model.Usuario;
@@ -181,29 +182,33 @@ public class Login extends javax.swing.JFrame {
                 return;
         }
         
-        // Usa a UsuarioDAO para verificar
-    UsuarioDAO usuarioDAO = new UsuarioDAO();
-    Usuario usuarioLogado = usuarioDAO.logarUsuario(usuarioDigita, senhaDigita);
-    
-    // Verifica se o login foi bem-sucedido
-    if (usuarioLogado != null) {
-        JOptionPane.showMessageDialog(this,
-            "Login realizado com sucesso! Bem-vindo(a), " + usuarioLogado.getNome(),
-            "Sucesso",
-            JOptionPane.INFORMATION_MESSAGE);
+      
+    controllerUsuario controllerUsuario = new controllerUsuario();
 
-        new Menu().setVisible(true);
-        this.dispose();
-    } else {
-        JOptionPane.showMessageDialog(this,
-            "Usuário ou senha incorretos!",
-            "Erro",
-            JOptionPane.ERROR_MESSAGE);
+        // Tenta realizar o login usando o ControllerUsuario
+        Usuario usuarioLogado = controllerUsuario.logarUsuario(usuarioDigita, senhaDigita);
 
-        usuarioLoginTxt.setText("");
-        senhaLoginTxt.setText("");
-        usuarioLoginTxt.requestFocus();
-    }
+        
+        if (usuarioLogado != null) {
+            
+            JOptionPane.showMessageDialog(this,
+                "Login realizado com sucesso! Bem-vindo(a), " + usuarioLogado.getNome(),
+                     "Sucesso",
+                     JOptionPane.INFORMATION_MESSAGE);
+
+            new Menu().setVisible(true);
+            this.dispose(); 
+            } else {
+                
+                   JOptionPane.showMessageDialog(this,
+                     "Usuário ou senha incorretos!",
+                     "Erro",
+                     JOptionPane.ERROR_MESSAGE);
+
+    usuarioLoginTxt.setText(""); 
+    senhaLoginTxt.setText("");   
+    usuarioLoginTxt.requestFocus(); 
+}
         
         
         
