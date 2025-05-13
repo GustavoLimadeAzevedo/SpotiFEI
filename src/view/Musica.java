@@ -26,18 +26,20 @@ public class Musica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        musicaPanel = new javax.swing.JPanel();
+        musicaLabel = new javax.swing.JLabel();
         bt_irMenu = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        telaDasMusicas = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        musicaPanel.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 255, 51));
-        jLabel1.setText("MÚSICAS");
+        musicaLabel.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        musicaLabel.setForeground(new java.awt.Color(0, 255, 51));
+        musicaLabel.setText("MÚSICAS");
 
         bt_irMenu.setBackground(new java.awt.Color(0, 0, 0));
         bt_irMenu.setForeground(new java.awt.Color(51, 255, 51));
@@ -48,24 +50,34 @@ public class Musica extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        telaDasMusicas.setColumns(20);
+        telaDasMusicas.setRows(5);
+        jScrollPane1.setViewportView(telaDasMusicas);
+
+        javax.swing.GroupLayout musicaPanelLayout = new javax.swing.GroupLayout(musicaPanel);
+        musicaPanel.setLayout(musicaPanelLayout);
+        musicaPanelLayout.setHorizontalGroup(
+            musicaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, musicaPanelLayout.createSequentialGroup()
                 .addContainerGap(138, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(musicaLabel)
                 .addGap(133, 133, 133))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(musicaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(bt_irMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(musicaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(musicaPanelLayout.createSequentialGroup()
+                        .addComponent(bt_irMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
+        musicaPanelLayout.setVerticalGroup(
+            musicaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(musicaPanelLayout.createSequentialGroup()
+                .addComponent(musicaLabel)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(bt_irMenu)
                 .addGap(14, 14, 14))
         );
@@ -74,11 +86,11 @@ public class Musica extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(musicaPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(musicaPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -130,7 +142,9 @@ public class Musica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_irMenu;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel musicaLabel;
+    private javax.swing.JPanel musicaPanel;
+    private javax.swing.JTextArea telaDasMusicas;
     // End of variables declaration//GEN-END:variables
 }
