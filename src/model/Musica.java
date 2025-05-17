@@ -8,6 +8,7 @@ package model;
  *
  * @author gusta
  */
+//
 public class Musica {
     private int id;
     private String titulo;
@@ -40,24 +41,3 @@ public class Musica {
 
 
 
-//private void configurarTabela() {
-//        DefaultTableModel model = new DefaultTableModel(
-//            new Object[][]{},
-//            new String[]{"Título", "Artista", "Gênero"}  // Corrigido para Gênero
-//        );
-//        jTableMusicas.setModel(model);
-//    }
-//    
-//    
-//    private void carregarMusicas() {
-//        DefaultTableModel model = (DefaultTableModel) jTableMusicas.getModel();
-//        model.setRowCount(0);
-//    
-//        List<Musica> musicas = controller.listarTodasMusicas();
-//        for (Musica musica : musicas) {
-//            model.addRow(new Object[]{
-//                musica.getTitulo(),
-//                musica.getArtista(),
-//                musica.getGenero()  // Corrigido para getGenero()
-//            });
-//        }
