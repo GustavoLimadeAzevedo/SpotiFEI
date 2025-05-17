@@ -13,6 +13,8 @@ import model.Musica;
  *
  * @author gusta
  */
+// Tela da Musica
+
 public class TelaMusica extends javax.swing.JFrame {
     
     private controllerMusica controller;
@@ -103,7 +105,7 @@ public class TelaMusica extends javax.swing.JFrame {
 
         jLabelMusicas.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabelMusicas.setForeground(new java.awt.Color(0, 204, 0));
-        jLabelMusicas.setText("Musica");
+        jLabelMusicas.setText("MUSICA");
 
         javax.swing.GroupLayout jPanelMusicaLayout = new javax.swing.GroupLayout(jPanelMusica);
         jPanelMusica.setLayout(jPanelMusicaLayout);
@@ -120,7 +122,7 @@ public class TelaMusica extends javax.swing.JFrame {
                         .addComponent(jButtonBuscar))
                     .addGroup(jPanelMusicaLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
-                        .addComponent(jLabelMusicas, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelMusicas, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanelMusicaLayout.setVerticalGroup(
