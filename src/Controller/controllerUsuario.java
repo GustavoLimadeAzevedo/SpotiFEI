@@ -16,6 +16,7 @@ import java.sql.ResultSet;
  *
  * @author gusta
  */
+//
 public class controllerUsuario {
     private Connection con;
     
