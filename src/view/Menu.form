@@ -38,24 +38,27 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="118" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="botaIrPlaylist" pref="123" max="32767" attributes="0"/>
+                  <Component id="bt_Suasplaylists" min="-2" pref="119" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="botaoIrcriarPlaylist" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btMusica" min="-2" pref="127" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="bt_criaPlaylist" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                  <Component id="bt_Musicas" min="-2" pref="116" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -63,13 +66,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="botaoIrcriarPlaylist" alignment="1" min="-2" pref="83" max="-2" attributes="0"/>
-                      <Component id="botaIrPlaylist" alignment="3" min="-2" pref="82" max="-2" attributes="0"/>
-                      <Component id="btMusica" alignment="3" min="-2" pref="83" max="-2" attributes="0"/>
+                      <Component id="bt_Suasplaylists" alignment="3" min="-2" pref="120" max="-2" attributes="0"/>
+                      <Component id="bt_criaPlaylist" alignment="3" min="-2" pref="121" max="-2" attributes="0"/>
+                      <Component id="bt_Musicas" alignment="3" min="-2" pref="121" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="113" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -81,12 +84,12 @@
               <Font name="Arial Black" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="cc" red="0" type="rgb"/>
+              <Color blue="33" green="ff" red="33" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="SpotiFEI"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="botaIrPlaylist">
+        <Component class="javax.swing.JButton" name="bt_Suasplaylists">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -97,10 +100,25 @@
             <Property name="text" type="java.lang.String" value="Suas Playlists"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaIrPlaylistActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_SuasplaylistsActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="botaoIrcriarPlaylist">
+        <Component class="javax.swing.JButton" name="bt_Musicas">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="ff" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="M&#xfa;sicas"/>
+            <Property name="actionCommand" type="java.lang.String" value=""/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_MusicasActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="bt_criaPlaylist">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -111,21 +129,7 @@
             <Property name="text" type="java.lang.String" value="Crie uma Playlist"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoIrcriarPlaylistActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btMusica">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="ff" red="33" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="M&#xfa;sicas"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btMusicaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_criaPlaylistActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

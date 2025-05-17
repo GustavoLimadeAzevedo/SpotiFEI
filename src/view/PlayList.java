@@ -160,10 +160,10 @@ public class PlayList extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_voltaMenuActionPerformed
 
     private void btMusicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMusicaActionPerformed
-        Musica telaMusica = new Musica();
-        telaMusica.setLocationRelativeTo(null);
-        telaMusica.setVisible(true);
-        this.dispose(); // TODO add your handling code here:
+        TelaMusica telaMusica = new TelaMusica();
+        telaMusica.setLocationRelativeTo(null);  // Centraliza a janela
+        telaMusica.setVisible(true);             // Torna a janela visível
+        this.dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_btMusicaActionPerformed
 
     /**

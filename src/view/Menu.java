@@ -28,42 +28,44 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        botaIrPlaylist = new javax.swing.JButton();
-        botaoIrcriarPlaylist = new javax.swing.JButton();
-        btMusica = new javax.swing.JButton();
+        bt_Suasplaylists = new javax.swing.JButton();
+        bt_Musicas = new javax.swing.JButton();
+        bt_criaPlaylist = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 204, 51));
+        jLabel1.setForeground(new java.awt.Color(51, 255, 51));
         jLabel1.setText("SpotiFEI");
 
-        botaIrPlaylist.setBackground(new java.awt.Color(0, 0, 0));
-        botaIrPlaylist.setForeground(new java.awt.Color(51, 255, 51));
-        botaIrPlaylist.setText("Suas Playlists");
-        botaIrPlaylist.addActionListener(new java.awt.event.ActionListener() {
+        bt_Suasplaylists.setBackground(new java.awt.Color(0, 0, 0));
+        bt_Suasplaylists.setForeground(new java.awt.Color(51, 255, 51));
+        bt_Suasplaylists.setText("Suas Playlists");
+        bt_Suasplaylists.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaIrPlaylistActionPerformed(evt);
+                bt_SuasplaylistsActionPerformed(evt);
             }
         });
 
-        botaoIrcriarPlaylist.setBackground(new java.awt.Color(0, 0, 0));
-        botaoIrcriarPlaylist.setForeground(new java.awt.Color(51, 255, 51));
-        botaoIrcriarPlaylist.setText("Crie uma Playlist");
-        botaoIrcriarPlaylist.addActionListener(new java.awt.event.ActionListener() {
+        bt_Musicas.setBackground(new java.awt.Color(0, 0, 0));
+        bt_Musicas.setForeground(new java.awt.Color(51, 255, 51));
+        bt_Musicas.setText("Músicas");
+        bt_Musicas.setActionCommand("");
+        bt_Musicas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoIrcriarPlaylistActionPerformed(evt);
+                bt_MusicasActionPerformed(evt);
             }
         });
 
-        btMusica.setBackground(new java.awt.Color(0, 0, 0));
-        btMusica.setForeground(new java.awt.Color(51, 255, 51));
-        btMusica.setText("Músicas");
-        btMusica.addActionListener(new java.awt.event.ActionListener() {
+        bt_criaPlaylist.setBackground(new java.awt.Color(0, 0, 0));
+        bt_criaPlaylist.setForeground(new java.awt.Color(51, 255, 51));
+        bt_criaPlaylist.setText("Crie uma Playlist");
+        bt_criaPlaylist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMusicaActionPerformed(evt);
+                bt_criaPlaylistActionPerformed(evt);
             }
         });
 
@@ -71,28 +73,29 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(139, 139, 139)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(botaIrPlaylist, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addComponent(bt_Suasplaylists, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(botaoIrcriarPlaylist)
-                        .addGap(18, 18, 18)
-                        .addComponent(btMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(16, 16, 16))
+                .addComponent(bt_criaPlaylist)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(bt_Musicas, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoIrcriarPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaIrPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(165, 165, 165))
+                    .addComponent(bt_Suasplaylists, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_criaPlaylist, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_Musicas, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 113, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -109,30 +112,28 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoIrcriarPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoIrcriarPlaylistActionPerformed
-        // TODO add your handling code here:CriaPlaylist telaCriaPlaylist = new CriaPlaylist();
-    CriaPlaylist telaCriaPlaylist = new CriaPlaylist();
-    telaCriaPlaylist.setLocationRelativeTo(null); // Centraliza na tela
-    telaCriaPlaylist.setVisible(true);
-    this.dispose(); // Fecha a tela atual
-    }//GEN-LAST:event_botaoIrcriarPlaylistActionPerformed
-
-    private void botaIrPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaIrPlaylistActionPerformed
-    PlayList telaPlaylist = new PlayList();
+    private void bt_SuasplaylistsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SuasplaylistsActionPerformed
+        PlayList telaPlaylist = new PlayList();
     // Centraliza a nova janela na tela
     telaPlaylist.setLocationRelativeTo(null);
     // Exibe a tela de playlist
     telaPlaylist.setVisible(true);
-    this.dispose();
-// TODO add your handling code here:
-    }//GEN-LAST:event_botaIrPlaylistActionPerformed
+    this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_bt_SuasplaylistsActionPerformed
 
-    private void btMusicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMusicaActionPerformed
-        Musica telaMusica = new Musica();
-        telaMusica.setLocationRelativeTo(null);
-        telaMusica.setVisible(true);
-        this.dispose(); // TODO add your handling code here:// TODO add your handling code here:
-    }//GEN-LAST:event_btMusicaActionPerformed
+    private void bt_criaPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_criaPlaylistActionPerformed
+        CriaPlaylist telaCriaPlaylist = new CriaPlaylist();
+    telaCriaPlaylist.setLocationRelativeTo(null); // Centraliza na tela
+    telaCriaPlaylist.setVisible(true);
+    this.dispose(); // Fecha a tela atual// TODO add your handling code here:
+    }//GEN-LAST:event_bt_criaPlaylistActionPerformed
+
+    private void bt_MusicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_MusicasActionPerformed
+       TelaMusica telaMusica = new TelaMusica();
+    telaMusica.setLocationRelativeTo(null);  // Centraliza a janela
+    telaMusica.setVisible(true);             // Torna a janela visível
+    this.dispose();         // TODO add your handling code here: // TODO add your handling code here:
+    }//GEN-LAST:event_bt_MusicasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,9 +171,9 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaIrPlaylist;
-    private javax.swing.JButton botaoIrcriarPlaylist;
-    private javax.swing.JButton btMusica;
+    private javax.swing.JButton bt_Musicas;
+    private javax.swing.JButton bt_Suasplaylists;
+    private javax.swing.JButton bt_criaPlaylist;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
