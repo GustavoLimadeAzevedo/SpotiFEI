@@ -4,10 +4,31 @@
  */
 package Controller;
 
+import dao.MusicaDAO;
+import model.Musica;
+import java.util.List;
+
 /**
  *
  * @author gusta
  */
 public class controllerMusica {
+    private MusicaDAO musicaDAO;
+    
+    
+    
+    public controllerMusica() {
+        this.musicaDAO = new MusicaDAO();
+    }
+    
+    public List<Musica> listarTodasMusicas() {
+        return musicaDAO.listarTodas();
+    }
+    
+    public List<Musica> buscarMusicas(String termo) {
+        return musicaDAO.buscar(termo);
+    }
+    
+   
     
 }
