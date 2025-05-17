@@ -8,6 +8,7 @@ package view;
  *
  * @author gusta
  */
+//Tela de playlist
 public class PlayList extends javax.swing.JFrame {
 
     /**
@@ -27,7 +28,7 @@ public class PlayList extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelPlaylist = new javax.swing.JLabel();
         bt_voltaMenu = new javax.swing.JButton();
         btMusica = new javax.swing.JButton();
         bt_irParaCriaPlaylist = new javax.swing.JButton();
@@ -40,9 +41,9 @@ public class PlayList extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 255, 51));
-        jLabel1.setText("PLAYLISTS");
+        jLabelPlaylist.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabelPlaylist.setForeground(new java.awt.Color(0, 255, 51));
+        jLabelPlaylist.setText("PLAYLISTS");
 
         bt_voltaMenu.setBackground(new java.awt.Color(0, 0, 0));
         bt_voltaMenu.setForeground(new java.awt.Color(51, 255, 102));
@@ -90,7 +91,7 @@ public class PlayList extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(jLabelPlaylist)
                 .addGap(122, 122, 122))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +114,7 @@ public class PlayList extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelPlaylist)
                 .addGap(22, 22, 22)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -206,8 +207,8 @@ public class PlayList extends javax.swing.JFrame {
     private javax.swing.JButton bt_irParaCriaPlaylist;
     private javax.swing.JButton bt_voltaMenu;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelPlaylist;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
