@@ -8,6 +8,7 @@ package view;
  *
  * @author felip
  */
+// Tela de menu
 public class Menu extends javax.swing.JFrame {
 
     /**
@@ -27,7 +28,7 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelMenu = new javax.swing.JLabel();
         bt_Suasplaylists = new javax.swing.JButton();
         bt_Musicas = new javax.swing.JButton();
         bt_criaPlaylist = new javax.swing.JButton();
@@ -37,9 +38,9 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 255, 51));
-        jLabel1.setText("SpotiFEI");
+        jLabelMenu.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabelMenu.setForeground(new java.awt.Color(51, 255, 51));
+        jLabelMenu.setText("SpotiFEI");
 
         bt_Suasplaylists.setBackground(new java.awt.Color(0, 0, 0));
         bt_Suasplaylists.setForeground(new java.awt.Color(51, 255, 51));
@@ -75,7 +76,7 @@ public class Menu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(139, 139, 139)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -89,7 +90,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelMenu)
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_Suasplaylists, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -174,7 +175,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton bt_Musicas;
     private javax.swing.JButton bt_Suasplaylists;
     private javax.swing.JButton bt_criaPlaylist;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelMenu;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
