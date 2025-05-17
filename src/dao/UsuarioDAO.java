@@ -15,6 +15,7 @@ import java.sql.ResultSet;
  *
  * @author gusta
  */
+//
 public class UsuarioDAO {
     private Connection con;
 
