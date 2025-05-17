@@ -76,6 +76,8 @@ public class TelaMusica extends javax.swing.JFrame {
         jTextFieldBusca = new javax.swing.JTextField();
         jButtonBuscar = new javax.swing.JButton();
         jLabelMusicas = new javax.swing.JLabel();
+        botaoMenu = new javax.swing.JButton();
+        BotaoPL = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,6 +109,20 @@ public class TelaMusica extends javax.swing.JFrame {
         jLabelMusicas.setForeground(new java.awt.Color(0, 204, 0));
         jLabelMusicas.setText("MUSICA");
 
+        botaoMenu.setText("Menu");
+        botaoMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMenuActionPerformed(evt);
+            }
+        });
+
+        BotaoPL.setText("Suas Playlists");
+        BotaoPL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotaoPLActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelMusicaLayout = new javax.swing.GroupLayout(jPanelMusica);
         jPanelMusica.setLayout(jPanelMusicaLayout);
         jPanelMusicaLayout.setHorizontalGroup(
@@ -116,14 +132,21 @@ public class TelaMusica extends javax.swing.JFrame {
                     .addGroup(jPanelMusicaLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonBuscar))
+                        .addGroup(jPanelMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelMusicaLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonBuscar))
+                            .addGroup(jPanelMusicaLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(botaoMenu)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addComponent(BotaoPL))))
                     .addGroup(jPanelMusicaLayout.createSequentialGroup()
                         .addGap(230, 230, 230)
                         .addComponent(jLabelMusicas, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addGap(34, 34, 34))
         );
         jPanelMusicaLayout.setVerticalGroup(
             jPanelMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,13 +154,17 @@ public class TelaMusica extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabelMusicas)
                 .addGap(18, 18, 18)
-                .addGroup(jPanelMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelMusicaLayout.createSequentialGroup()
                         .addGroup(jPanelMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextFieldBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonBuscar))
-                        .addContainerGap(283, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelMusicaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(botaoMenu)
+                            .addComponent(BotaoPL)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +199,23 @@ public class TelaMusica extends javax.swing.JFrame {
             });
         }
     }//GEN-LAST:event_jButtonBuscarActionPerformed
+
+    private void botaoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMenuActionPerformed
+        // TODO add your handling code here:
+        Menu telaMenu = new Menu();
+        telaMenu.setLocationRelativeTo(null); // Centraliza na tela
+        telaMenu.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_botaoMenuActionPerformed
+
+    private void BotaoPLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoPLActionPerformed
+        // TODO add your handling code here:
+        PlayList telaPlaylist = new PlayList();   
+        telaPlaylist.setLocationRelativeTo(null);
+        telaPlaylist.setVisible(true);   
+        this.dispose();
+    }//GEN-LAST:event_BotaoPLActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,6 +253,8 @@ public class TelaMusica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoPL;
+    private javax.swing.JButton botaoMenu;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JLabel jLabelMusicas;
     private javax.swing.JPanel jPanelMusica;
