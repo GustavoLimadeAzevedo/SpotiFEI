@@ -5,12 +5,8 @@
 package dao;
 
 import Conexao.Conexao;
-import model.PlayList;
-import model.Musica;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JOptionPane;
+
 
 
 /**
