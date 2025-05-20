@@ -38,11 +38,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="loginPanel" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
+              <Component id="loginPanel" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -76,12 +72,12 @@
                                   <Group type="102" attributes="0">
                                       <Component id="senhaLoginAdm" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="senhaLoginTxt" min="-2" pref="204" max="-2" attributes="0"/>
+                                      <Component id="senhaLoginTxtAdm" min="-2" pref="204" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="usuarioLoginAdm" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="usuarioLoginTxt" min="-2" pref="204" max="-2" attributes="0"/>
+                                      <Component id="usuarioLoginTxtAdm" min="-2" pref="204" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="LoginAdm" min="-2" max="-2" attributes="0"/>
@@ -90,7 +86,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="83" max="32767" attributes="0"/>
+                      <EmptySpace pref="95" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -107,12 +103,12 @@
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="usuarioLoginAdm" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="usuarioLoginTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="usuarioLoginTxtAdm" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="senhaLoginAdm" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="senhaLoginTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="senhaLoginTxtAdm" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="loginButtonAdm" min="-2" max="-2" attributes="0"/>
@@ -160,24 +156,24 @@
                 <Property name="text" type="java.lang.String" value="Senha:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="usuarioLoginTxt">
+            <Component class="javax.swing.JTextField" name="usuarioLoginTxtAdm">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usuarioLoginTxtActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usuarioLoginTxtAdmActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="senhaLoginTxt">
+            <Component class="javax.swing.JTextField" name="senhaLoginTxtAdm">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senhaLoginTxtActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senhaLoginTxtAdmActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JToggleButton" name="loginButtonAdm">
