@@ -56,8 +56,8 @@
                           </Group>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="usuarioLoginTxt" max="32767" attributes="0"/>
-                              <Component id="senhaLoginTxt" pref="138" max="32767" attributes="0"/>
+                              <Component id="usuarioLoginTxt" pref="159" max="32767" attributes="0"/>
+                              <Component id="senhaLoginTxt" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -67,7 +67,7 @@
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="107" max="32767" attributes="0"/>
+                  <EmptySpace pref="86" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -146,8 +146,24 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="usuarioLoginTxt">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usuarioLoginTxtActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="senhaLoginTxt">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senhaLoginTxtActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="loginButton">
           <Properties>

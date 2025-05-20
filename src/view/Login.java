@@ -61,6 +61,20 @@ public class Login extends javax.swing.JFrame {
         senhaLogin.setForeground(new java.awt.Color(0, 204, 0));
         senhaLogin.setText("Senha:");
 
+        usuarioLoginTxt.setBackground(new java.awt.Color(102, 102, 102));
+        usuarioLoginTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuarioLoginTxtActionPerformed(evt);
+            }
+        });
+
+        senhaLoginTxt.setBackground(new java.awt.Color(102, 102, 102));
+        senhaLoginTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senhaLoginTxtActionPerformed(evt);
+            }
+        });
+
         loginButton.setBackground(new java.awt.Color(0, 0, 0));
         loginButton.setForeground(new java.awt.Color(0, 204, 0));
         loginButton.setText("Logar");
@@ -95,14 +109,14 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(usuarioLogin))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(usuarioLoginTxt)
-                            .addComponent(senhaLoginTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)))
+                            .addComponent(usuarioLoginTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                            .addComponent(senhaLoginTxt)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(voltar_login)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)))
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,6 +221,14 @@ public class Login extends javax.swing.JFrame {
         telaCadastro.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltar_loginActionPerformed
+
+    private void senhaLoginTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaLoginTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senhaLoginTxtActionPerformed
+
+    private void usuarioLoginTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioLoginTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usuarioLoginTxtActionPerformed
 
     /**
      * @param args the command line arguments
