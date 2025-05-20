@@ -4,6 +4,11 @@
  */
 package view;
 
+import model.Admin;
+import dao.AdminDAO;
+import Controller.controllerAdmin;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gusta
@@ -13,6 +18,9 @@ public class AdminViewCadastro extends javax.swing.JFrame {
     /**
      * Creates new form AdminView
      */
+    
+    private Admin admin;
+    
     public AdminViewCadastro() {
         initComponents();
     }
@@ -171,7 +179,7 @@ public class AdminViewCadastro extends javax.swing.JFrame {
                     .addComponent(senhaCadastroTxtAdm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(cadastroButtonAdm)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(cadastroPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(IrLoginAdm))
@@ -189,8 +197,8 @@ public class AdminViewCadastro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cadastroPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cadastroPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -201,6 +209,73 @@ public class AdminViewCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_senhaCadastroTxtAdmActionPerformed
 
     private void cadastroButtonAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroButtonAdmActionPerformed
+
+// 1. Obter valores dos campos
+   // Obter valores dos campos
+    String nome = nomeCadastroTxtAdm.getText().trim();
+    String usuario = usuarioCadastroTxtAdm.getText().trim();
+    String senha = new String(senhaCadastroTxtAdm.getText()).trim();
+
+    // 2. Validação dos campos
+    if (nome.isEmpty()) {
+        JOptionPane.showMessageDialog(this, 
+            "O campo Nome não pode estar vazio!", 
+            "Erro", 
+            JOptionPane.ERROR_MESSAGE);
+        nomeCadastroTxtAdm.requestFocus();
+        return;
+    }
+
+    if (usuario.isEmpty()) {
+        JOptionPane.showMessageDialog(this, 
+            "O campo Usuário não pode estar vazio!", 
+            "Erro", 
+            JOptionPane.ERROR_MESSAGE);
+        usuarioCadastroTxtAdm.requestFocus();
+        return;
+    }
+
+    if (senha.isEmpty()) {
+        JOptionPane.showMessageDialog(this, 
+            "O campo Senha não pode estar vazio!", 
+            "Erro", 
+            JOptionPane.ERROR_MESSAGE);
+        senhaCadastroTxtAdm.requestFocus();
+        return;
+    }
+
+    // 3. Criar objeto Admin (model)
+    Admin adm = new Admin();
+    adm.setNome(nome);
+    adm.setUsuario(usuario);
+    adm.setSenha(senha); // Considerar adicionar criptografia aqui
+
+    try {
+        // 4. Chamar controller para cadastrar
+        controllerAdmin controller = new controllerAdmin();
+        controller.cadastrarAdministrador(adm);
+
+        // 5. Limpar campos após cadastro
+        nomeCadastroTxtAdm.setText("");
+        usuarioCadastroTxtAdm.setText("");
+        senhaCadastroTxtAdm.setText("");
+
+        // 6. Feedback de sucesso
+        JOptionPane.showMessageDialog(this, 
+            "Administrador cadastrado com sucesso!", 
+            "Sucesso", 
+            JOptionPane.INFORMATION_MESSAGE);
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, 
+            "Erro ao cadastrar administrador: " + e.getMessage(), 
+            "Erro", 
+            JOptionPane.ERROR_MESSAGE);
+        e.printStackTrace();
+    }
+
+
+
         
 
     }//GEN-LAST:event_cadastroButtonAdmActionPerformed
