@@ -27,15 +27,28 @@ public class PlayList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bt_irParaCriaPlaylist = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabelPlaylist = new javax.swing.JLabel();
         bt_voltaMenu = new javax.swing.JButton();
         btMusica = new javax.swing.JButton();
-        bt_irParaCriaPlaylist = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton4 = new javax.swing.JButton();
+
+        bt_irParaCriaPlaylist.setBackground(new java.awt.Color(0, 0, 0));
+        bt_irParaCriaPlaylist.setForeground(new java.awt.Color(51, 255, 51));
+        bt_irParaCriaPlaylist.setText("Criar uma playlist");
+        bt_irParaCriaPlaylist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_irParaCriaPlaylistActionPerformed(evt);
+            }
+        });
+
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setForeground(new java.awt.Color(51, 255, 51));
+        jButton4.setText("Excluir Playlist");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,15 +76,6 @@ public class PlayList extends javax.swing.JFrame {
             }
         });
 
-        bt_irParaCriaPlaylist.setBackground(new java.awt.Color(0, 0, 0));
-        bt_irParaCriaPlaylist.setForeground(new java.awt.Color(51, 255, 51));
-        bt_irParaCriaPlaylist.setText("Criar uma playlist");
-        bt_irParaCriaPlaylist.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_irParaCriaPlaylistActionPerformed(evt);
-            }
-        });
-
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 255, 51));
         jLabel2.setText("Suas Playlists: ");
@@ -81,35 +85,25 @@ public class PlayList extends javax.swing.JFrame {
         jTextArea1.setText("playlists que foram criadas...");
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setForeground(new java.awt.Color(51, 255, 51));
-        jButton4.setText("Excluir Playlist");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(150, Short.MAX_VALUE)
                 .addComponent(jLabelPlaylist)
                 .addGap(122, 122, 122))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(bt_voltaMenu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btMusica)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                        .addComponent(bt_irParaCriaPlaylist)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(14, 14, 14)
+                .addComponent(jLabel2)
+                .addContainerGap(308, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(bt_voltaMenu)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btMusica)
+                .addGap(91, 91, 91))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,15 +111,17 @@ public class PlayList extends javax.swing.JFrame {
                 .addComponent(jLabelPlaylist)
                 .addGap(22, 22, 22)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_voltaMenu)
-                    .addComponent(btMusica)
-                    .addComponent(bt_irParaCriaPlaylist)
-                    .addComponent(jButton4))
-                .addGap(15, 15, 15))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 81, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btMusica)
+                            .addComponent(bt_voltaMenu))
+                        .addGap(27, 27, 27))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,12 +139,7 @@ public class PlayList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_irParaCriaPlaylistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_irParaCriaPlaylistActionPerformed
-        // TODO add your handling code here:
-       // Substitui a tela de cadastro pela tela de criar playlist
-    CriaPlaylist telaCriaPlaylist = new CriaPlaylist();
-    telaCriaPlaylist.setLocationRelativeTo(null); // Centraliza na tela
-    telaCriaPlaylist.setVisible(true);
-    this.dispose(); // Fecha a tela atual
+        
         
     }//GEN-LAST:event_bt_irParaCriaPlaylistActionPerformed
 
