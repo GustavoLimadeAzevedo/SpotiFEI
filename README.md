@@ -18,7 +18,7 @@ Controller/: Contém as classes controladoras que gerenciam a lógica de negóci
 view/: Contém as classes da interface gráfica do usuário (GUI) desenvolvidas com Swing (AdminViewCadastro, AdminViewLogin, Cadastro, Login, Menu).
 Conexao/: (Observação: Embora ConexaoDAO.java esteja no pacote dao, há uma referência a Conexao.conectar(), sugerindo uma classe Conexao separada para a lógica de conexão. Se Conexao.java não for fornecida, será necessário criá-la).
 
-🗃 Modelo de Dados (Banco de Dados)
+ Modelo de Dados (Banco de Dados)
 Baseado nos DAOs, as tabelas esperadas no banco de dados são:
 
 administrador_usuario: Armazena informações dos administradores.
